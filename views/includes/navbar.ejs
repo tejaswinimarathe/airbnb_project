@@ -1,0 +1,82 @@
+<style>
+  .btn-search{
+    background-color: #DC0D63;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .btn-search:hover{
+    background-color: #DC0D63;
+    color: white;
+  }
+   .btn-search i{
+    display: inline;
+    margin-right: 5px;
+   }
+   .search-input{
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 0.9rem;
+   }
+   .dropdown-menu{
+    margin-top: 10px;
+    border: none;
+   }
+   .login-bar{
+    border: 1px solid rgb(159, 157, 157);
+    border-radius:20px;
+    margin-right: 10px;
+   }
+</style>
+<nav class="navbar navbar-expand-md navbar-light bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+          <a class="nav-link" href="/listings">Explore</a>        
+      </div>
+      
+      <div class="navbar-nav ms-auto">
+    <form class="d-flex" role="search" method="post" action="/listings/search">
+    <input class="form-control me-2 search-input" name="country" type="text" placeholder="Search country" >
+    <button class="btn btn-search my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+  </form>
+      </div>
+
+
+
+      <div class="navbar-nav ms-auto">
+         <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        <div class="btn-group dropstart">
+          <button type="button" class="btn login-bar" data-bs-toggle="dropdown" aria-expanded="false">
+           <i class="fa-solid fa-bars"></i>
+           <i class="fa-solid fa-user"></i>
+          </button>
+          <ul class="dropdown-menu mt-5 p-4 shadow" style="width: 250px;">
+              <%if(!currUser){%>
+                      <a class="nav-link" aria-current="page" href="/signup"><b>Sign Up</b></a>
+                      <a class="nav-link" href="/login"><b>Log In</b></a>
+                    <%}%>
+                    <%if(currUser){%>
+                      <a class="nav-link" href="/logout"><b>Log Out</b></a>
+                    <%}%>
+                    <hr>
+                    <a class="nav-link" href="/listings/new">Airbnb your home</a>
+                    <a class="nav-link" href="/listings">Explore</a> 
+
+          </ul>
+        </div>
+         
+</div>
+
+ </div>
+
+      
+   
+
+  </div>
+</nav>

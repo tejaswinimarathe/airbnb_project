@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+.fa-compass{
+    font-size: 40px;
+    color:#DC0D63;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+/*footer*/
+.f-info-links a{
+text-decoration: none;
+color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i{
+    margin-right: 1rem;
+     font-size: 1.2rem;
+}
+.f_info{
+    height: 8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+    align-items:space-evenly;
+    flex-wrap: wrap;
+}
+
+/*cards*/
+
+.card{
+    border: none;
+    margin-bottom: 2rem ;
+}
+.card-img-top{
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 0;
+}
+.card-text p{
+    font-weight: 400;
+}
+img{
+    height: 20rem;
+}
+.listing-link{
+    text-decoration: none;
+    color: #222222;
+}
+.listing-link:hover{
+    text-decoration: none;
+    color: #222222;
+}
+.card-img-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition for smooth effect */
+}
+
+.card-img-overlay:hover {
+    opacity: 0.9; /* Use a valid value between 0 and 1 */
+}
+
+/*new page*/
+.add-btn{
+    background-color:#DC0D63;
+    color: white;
+    border: none;
+}
+
+/*show page*/
+.card-footer{
+    background-color: white;
+    border: none;
+}
+.edit-btn{
+    background-color: #DC0D63;
+    border: none;
+    color: white;
+}
+.delete-btn{
+    border: none;
+    background-color: #222222;
+}
+.show-img{
+    height: 30vh;
+}
+.review-btn{
+    height: 25px;
+    padding: 3px;
+}
